@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinMIST2", "WinMIST2.vcproj", "{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		External Release|Win32 = External Release|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}.Debug|Win32.Build.0 = Debug|Win32
+		{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}.External Release|Win32.ActiveCfg = External Release|Win32
+		{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}.External Release|Win32.Build.0 = External Release|Win32
+		{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}.Release|Win32.ActiveCfg = Release|Win32
+		{08AD38E2-F68F-4D6A-85AA-FC48607FB16C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

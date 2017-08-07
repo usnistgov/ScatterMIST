@@ -1,0 +1,1103 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\WinMIST2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WinMIST2.ico"
+IDR_WINMISTYPE          ICON                    "res\\WinMIST2Doc.ico"
+IDR_MODELBROWSER        ICON                    "res\\icon1.ico"
+IDR_POLARVIEW           ICON                    "res\\ico00002.ico"
+IDR_GRAPHVIEW           ICON                    "res\\ico00003.ico"
+IDR_RESULTSVIEW         ICON                    "res\\ico00004.ico"
+IDR_SAMPLESVIEW         ICON                    "res\\ico00005.ico"
+IDR_LISTINGVIEW         ICON                    "res\\ico00006.ico"
+IDR_RAWMISTYPE          ICON                    "res\\ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_WIZARD
+    SEPARATOR
+    BUTTON      ID_SIMULATE
+    SEPARATOR
+    BUTTON      ID_VIEW_RESULTS_GRAPH
+    BUTTON      ID_VIEW_SAMPLES_GRAPH
+    BUTTON      ID_VIEW_RESULTS_TEXT
+    BUTTON      ID_VIEW_LISTING
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Clear Data",                  ID_PURGE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "View Results (Text)",         ID_VIEW_RESULTS_TEXT
+        MENUITEM "View Results (Graph)",        ID_VIEW_RESULTS_GRAPH
+        MENUITEM "View Listing",                ID_VIEW_LISTING
+        MENUITEM "View Samples (Graph)",        ID_VIEW_SAMPLES_GRAPH
+        MENUITEM "Raw MIST Input",              ID_VIEWRAW
+    END
+    MENUITEM "Model&Browser",               ID_WIZARD
+    MENUITEM "&Simulate",                   ID_SIMULATE
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About WinMIST2...",          ID_APP_ABOUT
+        MENUITEM "MIST Website",                ID_HELP_MISTWEB
+        MENUITEM "SCATMECH Website",            ID_HELP_SCATMECHWEB
+    END
+END
+
+IDR_MENU1 MENU 
+BEGIN
+    MENUITEM "Edit",                        ID_EDIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_DELETE,      ID_DELETE,              VIRTKEY, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_ENTER,               VIRTKEY, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_REMOVE,              VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        IDC_MOVEDOWN,           VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          IDC_MOVEUP,             VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      IDCANCEL,               VIRTKEY, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_ADD,                 VIRTKEY, NOINVERT
+    VK_INSERT,      ID_ADD,                 VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 294, 283
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About WinMIST2"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,10,20,20
+    DEFPUSHBUTTON   "OK",IDOK,121,262,50,14,WS_GROUP
+    EDITTEXT        IDC_EDIT,35,35,245,205,ES_MULTILINE | ES_READONLY | NOT WS_BORDER
+    CTEXT           "Modeled Integrated Scatter Tool\r\n(MIST)\r\nVersion 4.00",IDC_STATIC,52,5,190,25
+END
+
+IDD_AXISFORM DIALOG  0, 0, 467, 13
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD
+FONT 10, "Arial"
+BEGIN
+    COMBOBOX        IDC_XAxisCombo,51,1,117,56,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_YAxisCombo,274,1,117,58,CBS_DROPDOWNLIST | WS_TABSTOP
+    LTEXT           "X Coordinate:",IDC_STATIC,7,4,45,8
+    LTEXT           "Y Coordinate:",IDC_STATIC,225,3,45,8
+    CONTROL         "Logarithmic",IDC_XLOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,173,1,51,12
+    CONTROL         "Logarithmic",IDC_YLOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,398,1,51,12
+END
+
+IDD_RUNNING DIALOG  0, 0, 181, 30
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTERMOUSE | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Running Simulation"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,1,167,9
+    PUSHBUTTON      "Cancel",IDCANCEL,65,13,50,14
+END
+
+IDD_POLARVIEWFORM DIALOGEX 0, 0, 610, 39
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Reset",IDC_BUTTON1,3,3,24,14,BS_NOTIFY
+    LTEXT           "Viewing Angle",IDC_STATIC,30,5,46,8
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,75,0,65,23
+    LTEXT           "Viewing Rotation",IDC_STATIC,140,5,55,8
+    CONTROL         "Slider1",IDC_SLIDER2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,195,0,65,21
+    PUSHBUTTON      "AutoScale",IDC_AUTOSCALE,2,23,38,13
+    LTEXT           "Min:",IDC_STATIC,45,22,15,10
+    EDITTEXT        IDC_POLARMIN,67,22,55,10,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Max:",IDC_STATIC,127,23,21,9
+    EDITTEXT        IDC_POLARMAX,147,22,55,10,ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_ORDER,232,22,23,11,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,257,22,8,11
+    PUSHBUTTON      "Options",IDC_OPTIONS,270,20,29,14
+    LTEXT           "Index:",IDC_STATIC,207,23,21,9
+END
+
+IDD_TREEWIZARD DIALOG  0, 0, 495, 221
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Model Browser"
+FONT 14, "System"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,225,207
+    EDITTEXT        IDC_EDIT1,235,48,255,166,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "OK",IDOK,440,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,440,24,50,14
+END
+
+IDD_BROWSERFORM DIALOG  0, 0, 440, 50
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MODELNAME,7,7,426,34,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_WIZARDPARAMS DIALOG  0, 0, 326, 306
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Assign Model Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,114,285,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,168,285,50,14
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,7,7,312,241
+    PUSHBUTTON      "Add",IDC_ADD,17,257,81,19
+    PUSHBUTTON      "Remove",IDC_REMOVE,124,257,81,19
+    DEFPUSHBUTTON   "Edit",IDC_EDIT,221,257,90,19
+END
+
+IDD_SAVECHANGE DIALOG  0, 0, 186, 44
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,37,23,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,23,50,14
+    LTEXT           "Save Change?",IDC_STATIC,71,7,48,8
+END
+
+IDD_POLAROPTIONS DIALOGEX 0, 0, 187, 116
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Polar View Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Show Intensity",IDC_SHOWINTENSITY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,80,12
+    CONTROL         "Show Intensity as BRDF",IDC_SHOWBRDF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,20,100,12
+    CONTROL         "Invert Intensity Scale",IDC_INVERTSCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,35,84,12
+    CONTROL         "Always Auto-Scale",IDC_ALWAYSAUTOSCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,50,85,10
+    CONTROL         "Fix Zero Intensity on Auto-Scale",IDC_FIXZERO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,65,115,10
+    LTEXT           "Data point size",IDC_STATIC,5,80,49,8
+    EDITTEXT        IDC_EDIT1,5,90,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,132,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,132,24,50,14
+END
+
+IDD_NEWUSERVARIABLE DIALOGEX 0, 0, 322, 170
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,5,65,310,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,5,95,310,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,126,310,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,105,150,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,175,150,50,14
+    LTEXT           "",IDC_DESCRIPTION,7,7,308,46
+    LTEXT           "Variable:",IDC_STATIC,5,55,28,8
+    LTEXT           "Value:",IDC_STATIC,5,85,21,8
+    LTEXT           "Comment:",IDC_STATIC,5,115,32,8
+END
+
+IDD_NEWFORLOOP DIALOG  0, 0, 302, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "For Loop"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_VARIABLE,5,15,210,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FROM,5,40,210,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TO,5,65,210,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BY,5,90,210,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,115,290,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,240,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,240,25,50,14
+    LTEXT           "Variable:",IDC_STATIC,5,5,28,8
+    LTEXT           "Start value:",IDC_STATIC,5,30,37,8
+    LTEXT           "End Value:",IDC_STATIC,5,55,36,8
+    LTEXT           "Step Value:",IDC_STATIC,5,80,38,8
+    LTEXT           "Comment:",IDC_STATIC,5,105,32,8
+END
+
+IDD_NEWINTEGRALDIALOG DIALOGEX 0, 0, 267, 100
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Integral"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "&CIRCLE Integral (calculates reflectance into cone)",IDC_CIRCLE,
+                    "Button",BS_AUTORADIOBUTTON,5,20,174,10
+    CONTROL         "&HEMI Integral (calculates reflectance over hemisphere)",IDC_HEMI,
+                    "Button",BS_AUTORADIOBUTTON,5,35,189,10
+    CONTROL         "&ANNULUS (calculates reflectance into an annulus)",IDC_ANNULUS,
+                    "Button",BS_AUTORADIOBUTTON,5,50,173,9
+    CONTROL         "&POLYGON Integral (calculates reflectance into arbitrary solid cone)",IDC_POLYGON,
+                    "Button",BS_AUTORADIOBUTTON,5,64,225,10
+    CONTROL         "&DIFFERENTIAL (evaluates scatter per solid angle)",IDC_DIFFERENTIAL,
+                    "Button",BS_AUTORADIOBUTTON,5,79,174,10
+    DEFPUSHBUTTON   "OK",IDOK,210,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,25,50,14
+    LTEXT           "Choose integration type:",IDC_STATIC,5,5,116,10
+END
+
+IDD_NEWCIRCLE DIALOGEX 0, 0, 292, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Circle Integral"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_NAME,5,17,195,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,5,43,195,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,5,69,195,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,5,95,195,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,5,121,195,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POLARIZATION,6,147,195,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,7,173,275,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,235,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,235,25,50,14
+    LTEXT           "Center Polar Angle [rad]:",IDC_STATIC,5,32,78,8
+    LTEXT           "Center Azimuth Angle [rad]:",IDC_STATIC,5,58,86,8
+    LTEXT           "Half Angle of Cone [rad]:",IDC_STATIC,5,84,78,8
+    LTEXT           "Polarization Sensitivity at Center of Aperture:",IDC_STATIC,5,136,140,8
+    LTEXT           "Integral Name:",IDC_STATIC,5,6,47,8
+    LTEXT           "Comment:",IDC_STATIC,5,162,32,8
+    LTEXT           "Incident polarization:",IDC_INCPOL,5,110,66,8
+END
+
+IDD_NEWPOLYGON DIALOGEX 0, 0, 302, 342
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Polygon Integral"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_NAME,5,15,133,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_THETA,11,55,100,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHI,121,55,100,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,245,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,245,25,50,14
+    EDITTEXT        IDC_POL,12,81,209,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,15,125,95,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,115,125,104,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT2,5,299,290,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,322,290,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Change",IDC_EDIT,15,140,40,15,WS_DISABLED
+    PUSHBUTTON      "&Add",IDC_ADDVERTEX,60,140,40,15,WS_DISABLED
+    PUSHBUTTON      "&Remove",IDC_DELETE,105,140,35,15,WS_DISABLED
+    PUSHBUTTON      "Move Up",IDC_MOVEUP,145,140,40,15,WS_DISABLED
+    PUSHBUTTON      "Move Down",IDC_MOVEDOWN,190,140,45,15,WS_DISABLED
+    CONTROL         "List2",IDC_VERTICES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,15,160,270,120
+    GROUPBOX        "Polygon Vertices",IDC_STATIC,5,105,290,180
+    LTEXT           "Polarization Sensitivity",IDC_STATIC,11,70,70,8
+    LTEXT           "Theta [rad]:",IDC_STATIC,15,115,38,8
+    LTEXT           "Phi [rad]:",IDC_STATIC,120,115,29,8
+    LTEXT           "Theta [rad]:",IDC_STATIC,11,45,38,8
+    LTEXT           "Phi [rad]:",IDC_STATIC,121,45,29,8
+    LTEXT           "Integral Name:",IDC_STATIC,5,5,47,8
+    GROUPBOX        "Direction for which polarization is defined:",IDC_STATIC,5,33,225,67
+    LTEXT           "Comment:",IDC_STATIC,5,312,32,8
+    LTEXT           "Incident polarization:",IDC_STATIC,5,289,66,8
+END
+
+IDD_CHOOSEMODEL DIALOGEX 0, 0, 272, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Model"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_COMBO,5,46,261,58,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_COMMENT,5,76,261,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,80,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,145,115,50,14
+    LTEXT           "",IDC_DESCRIPTION,7,7,259,39
+    LTEXT           "Comment:",IDC_STATIC,5,66,32,8
+    CONTROL         "Maintain parameters with same name",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,97,130,10
+END
+
+IDD_NEWHEMI DIALOGEX 0, 0, 287, 83
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hemispherical Integration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,5,15,145,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,5,39,145,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,64,275,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,165,15,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,225,15,50,14
+    LTEXT           "Integral Name:",IDC_STATIC,5,5,47,8
+    LTEXT           "Comment:",IDC_STATIC,5,54,32,8
+    LTEXT           "Incident polarization:",IDC_STATIC,5,30,66,8
+END
+
+IDD_OUTPUTDIALOG DIALOGEX 0, 0, 287, 111
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Output"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_LABEL,7,18,273,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,7,44,273,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,7,71,273,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,92,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,158,90,50,14
+    LTEXT           "Value:",IDC_STATIC,7,33,21,8
+    LTEXT           "Comment:",IDC_STATIC,7,60,32,8
+    LTEXT           "Label (optional):",IDC_STATIC,7,7,51,8
+END
+
+IDD_OVERWRITEWARNING DIALOG  0, 0, 186, 61
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,40,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,102,40,50,14
+    LTEXT           "ModelWizard will overwrite all instructions in current document.  Do you want to continue?",IDC_STATIC,7,17,172,19
+END
+
+IDD_NEWDOCUMENT DIALOG  0, 0, 169, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Document"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "WinMIST Wizard",IDOK,7,7,155,14
+    PUSHBUTTON      "MIST Raw Text Document",IDCANCEL,7,24,155,14
+END
+
+IDD_RAWMIST DIALOG  0, 0, 393, 266
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Raw MIST Input"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,114,245,50,14
+    PUSHBUTTON      "Create Raw MIST Document",IDC_CREATERAWMIST,180,245,103,14
+    EDITTEXT        IDC_TEXT,5,5,379,233,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_MODELVARIABLE DIALOG  0, 0, 322, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Model Variable"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT2,5,95,308,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,140,310,12,ES_AUTOHSCROLL
+    CONTROL         "Transfer directly as a string to model",IDC_STRING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,115,130,15
+    DEFPUSHBUTTON   "OK",IDOK,105,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,165,50,14
+    EDITTEXT        IDC_EDIT1,5,65,308,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Variable:",IDC_STATIC,5,55,28,8
+    LTEXT           "Value:",IDC_STATIC,5,85,21,8
+    LTEXT           "",IDC_DESCRIPTION,7,7,308,46
+    LTEXT           "Comment:",IDC_STATIC,5,130,32,8
+END
+
+IDD_NEWDIFFERENTIAL DIALOGEX 0, 0, 299, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Differential"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_NAME,5,15,210,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POLAR,5,40,210,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AZIMUTH,5,65,210,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INCPOL,5,92,210,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POLARIZATION,6,118,210,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,141,275,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,242,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,242,25,50,14
+    LTEXT           "Polar Angle [rad]:",IDC_STATIC,5,30,55,8
+    LTEXT           "Azimuth Angle [rad]:",IDC_STATIC,5,55,64,8
+    LTEXT           "Polarization Sensitivity",IDC_STATIC,5,106,70,8
+    LTEXT           "Integral Name:",IDC_STATIC,5,5,47,8
+    LTEXT           "Comment:",IDC_STATIC,5,131,32,8
+    LTEXT           "Incident Polarization",IDC_STATIC,5,81,64,8
+END
+
+IDD_NEWLOOPDIALOG DIALOGEX 0, 0, 252, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Varied Parameter"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "&FOR Loop (vary parameter over range)",IDC_FOR,"Button",BS_AUTORADIOBUTTON,5,15,165,15
+    CONTROL         "&LIST Loop (take parameters from file)",IDC_LIST,"Button",BS_AUTORADIOBUTTON,5,30,132,10
+    DEFPUSHBUTTON   "OK",IDOK,195,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,195,25,50,14
+    LTEXT           "Choose loop type:",IDC_STATIC,5,5,116,10
+END
+
+IDD_LISTLOOPDIALOG DIALOG  0, 0, 307, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "List Loop"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,5,15,240,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,5,40,295,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,100,65,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,65,50,14
+    LTEXT           "Filename with parameter values:",IDC_STATIC,5,5,102,8
+    LTEXT           "Comment:",IDC_STATIC,5,30,32,8
+    PUSHBUTTON      "&Browse",IDC_BROWSE,250,15,50,15
+END
+
+IDD_NEWSEHEMI DIALOGEX 0, 0, 287, 187
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hemispherical Integration with an Excluded Circle"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_NAME,7,16,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,5,161,275,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,165,15,32,14
+    PUSHBUTTON      "Cancel",IDCANCEL,207,15,32,14
+    LTEXT           "Integral Name:",IDC_STATIC,8,5,47,8
+    LTEXT           "Comment:",IDC_STATIC,8,150,32,8
+    EDITTEXT        IDC_INCPOL,7,45,145,15,ES_AUTOHSCROLL
+    LTEXT           "Incident polarization:",IDC_STATIC,8,34,66,8
+    EDITTEXT        IDC_POLAR,7,74,145,15,ES_AUTOHSCROLL
+    LTEXT           "Polar Excluded Angle [rad]:",IDC_STATIC,8,63,86,8
+    EDITTEXT        IDC_AZIMUTHAL,7,103,145,15,ES_AUTOHSCROLL
+    LTEXT           "Azimuthal Excluded Angle [rad]:",IDC_STATIC,8,92,100,8
+    EDITTEXT        IDC_ALPHA,7,132,145,15,ES_AUTOHSCROLL
+    LTEXT           "Excluded Half Angle [rad]:",IDC_STATIC,8,121,83,8
+END
+
+IDD_NEWANNULUS DIALOGEX 0, 0, 287, 328
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Annulus Integration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_NAME,7,17,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INCPOL,7,48,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POL,7,78,145,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTERPOLAR,7,107,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTERAZIMUTHAL,7,137,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTERALPHA,7,167,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INNERPOLAR,7,197,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INNERAZIMUTHAL,7,227,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INNERALPHA,7,257,145,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENT,7,293,275,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,188,15,32,14
+    PUSHBUTTON      "Cancel",IDCANCEL,230,15,32,14
+    LTEXT           "Integral Name:",IDC_STATIC,7,5,47,8
+    LTEXT           "Comment:",IDC_STATIC,7,281,32,8
+    LTEXT           "Incident polarization:",IDC_STATIC,7,36,66,8
+    LTEXT           "Polarization Sensitivity at center of outer circle",IDC_STATIC,7,67,145,8
+    LTEXT           "Polar angle of center of outside of annulus[rad]",IDC_STATIC,7,95,148,8
+    LTEXT           "Azimuth angle of center of outside of annulus [rad]",IDC_STATIC,7,126,158,8
+    LTEXT           "Half angle of outside of annulus [rad]",IDC_STATIC,7,157,116,8
+    LTEXT           "Polar angle of center of inside of annulus [rad]",IDC_STATIC,7,188,145,8
+    LTEXT           "Azimuth angle of center of inside of annulus [rad]",IDC_STATIC,7,219,154,8
+    LTEXT           "Half angle of inside of annulus [rad]",IDC_STATIC,7,250,112,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "National Institute of Standards and Technology"
+            VALUE "FileDescription", "WinMIST MFC Application"
+            VALUE "FileVersion", "4.00"
+            VALUE "InternalName", "WinMIST"
+            VALUE "LegalCopyright", "Work of the U.S. Government.  No Copyright."
+            VALUE "OriginalFilename", "WinMIST.EXE"
+            VALUE "ProductName", "WinMIST Application"
+            VALUE "ProductVersion", "4.00"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 276
+    END
+
+    IDD_AXISFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 460
+        TOPMARGIN, 1
+    END
+
+    IDD_RUNNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        BOTTOMMARGIN, 27
+    END
+
+    IDD_POLARVIEWFORM, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_TREEWIZARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 490
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_BROWSERFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 433
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_WIZARDPARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 299
+    END
+
+    IDD_SAVECHANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_POLAROPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_NEWUSERVARIABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_NEWFORLOOP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_NEWINTEGRALDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_NEWCIRCLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_NEWPOLYGON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+    END
+
+    IDD_CHOOSEMODEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_NEWHEMI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_OUTPUTDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_OVERWRITEWARNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_NEWDOCUMENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_RAWMIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_MODELVARIABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_NEWDIFFERENTIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_NEWLOOPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_LISTLOOPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_NEWSEHEMI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_NEWANNULUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 321
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_AXISFORM DLGINIT
+BEGIN
+    IDC_XAxisCombo, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "MIST - Modeled Integrated Scatter Tool"
+    IDR_WINMISTYPE          "\n\nMIST Document\nMIST Files (*.mist)\n.mist\nMIST.Document\nMIST Document"
+    IDR_RAWMISTYPE          "\n\nRaw MIST Document\nRaw MIST Files (*.txt)\n.txt\nMIST.Document\nMIST Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "WinMIST"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information and version number\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_RESULTS_TEXT    "View results in text format\nView results in text format"
+    ID_VIEW_RESULTS_GRAPH   "View results in graphical format\nView results in graphical format"
+    ID_VIEW_LISTING         "View intermediate listing for calculation\nView listing"
+    ID_VIEW_SAMPLES_TEXT    "View sampled directions in text format\nView sampled directions in text format"
+    ID_VIEW_SAMPLES_GRAPH   "View sampled directions graphically\nView sampled directions graphically"
+    ID_CALCULATE            "Performs integrated reflectance calculation\nPerforms integrated reflectance calculation"
+    ID_SIMULATE             "Perform Simulation\nPerform simulation"
+    ID_BUTTON32780          "ID_VIEW_SAMPLES_TEXT"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_GRAPHRESULTSFORMVIEW_TMPL 
+                            "\nGraphResultsFormView\nGraphR\nGraphR Files (*.gra)\n.gra\nGraphResultsFormView.Document\nGraphR Document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MIST0                "Run simulation using faster command line version"
+END
+
+STRINGTABLE 
+BEGIN
+    IDD_TREEWIZARD          "Opens the Model Browser, which provides information about models and their parameters"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WIZARD               "Opens the ModelBrowser\nModel Browser"
+    ID_MODELWIZARD          "Model Wizard"
+    ID_ADD                  "Add an element"
+    ID_REMOVE               "Removes an element"
+    ID_HELP_MISTWEB         "Open browser for MIST Website"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_EDIT                "Edit the element"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_POLARVIEW           "\nSampled Points View"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PURGE                "Clear Results"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\WinMIST2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
