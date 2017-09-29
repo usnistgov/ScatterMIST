@@ -255,7 +255,7 @@ void CWinMIST2App::OnAppAbout()
 	aboutDlg.m_text = "MIST was developed by: \r\n"
 					  "\r\n"
 					  "   Thomas A. Germer, Ph.D. \r\n"
-  					  "\r\n"
+					  "\r\n"
 					  "   Sensor Science Division\r\n"
 					  "   National Institute of Standards and Technology\r\n"
 					  "   100 Bureau Drive Stop 8443\r\n"
@@ -279,13 +279,13 @@ void CWinMIST2App::OnAppAbout()
 					  "redistributed and/or modified freely provided that any derivative\r\n"
 					  "works bear some notice that they are derived from it, and any modified\r\n"
 					  "versions bear some notice that they have been modified.\r\n"
-					  "\r\n";
+					  "\r\n"; 
 #endif
 
 	aboutDlg.m_text += CString("Build: ") + CString(__DATE__) + CString(" ") + CString(__TIME__);
 	aboutDlg.m_text += CString("\r\nUsing: ") + Get_SCATMECH_Version().c_str();
 
-	aboutDlg.DoModal();
+	aboutDlg.DoModal(); 
 }
 
 /////////////////////////////////////////////////////////////////////////////
