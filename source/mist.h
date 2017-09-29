@@ -83,7 +83,7 @@ public:
 	double rotation;				// The rotation of the sample (for anisotropic surfaces)
 	std::string incidentpol_string;		// String defining the incident polarization
 	
-
+	SCATMECH::BRDF_Model::Coordinate_System polarizationbasis;
 	std::string MODEL_name;
 	SCATMECH::BRDF_Model_Ptr MODEL_model;			// The scattering model
 	void MODEL_get(MIST_istream& inputstream);

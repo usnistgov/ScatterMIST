@@ -40,7 +40,7 @@ inline bool iswspace(char c) {return (( c>=0x09&&c<=0x0D ) || c==0x20);}
 //
 // Define version number...
 //
-#define MIST_VERSION "4.00(beta)"
+#define MIST_VERSION "4.01"
 
 using namespace SCATMECH;
 using namespace std;
@@ -309,17 +309,17 @@ void MIST::MODEL_get(MIST_istream& is)
 	if (MODEL_model.get()==NULL) throw MIST_exception("Invalid model: " + value);
 }
 
-void MIST::store_samples(double theta,double phi,double brdf)
+void MIST::store_samples(double theta,double phi,double signal)
 {
 	double x = sin(theta)*cos(phi);
 	double y = sin(theta)*sin(phi);
 	double z = cos(theta);
 	data->samples_x[order].push_back(x);
 	data->samples_y[order].push_back(y);
-	data->samples_i[order].push_back(brdf);
+	data->samples_i[order].push_back(signal);
 	
 	if (FILES_samples_bool) {
-		FILES_samples << order << tab << theta << tab << phi << tab << x << tab << y << tab << z << tab << brdf << endl;
+		FILES_samples << order << tab << theta << tab << phi << tab << x << tab << y << tab << z << tab << signal/z << endl;
 	}
 }
 
@@ -357,6 +357,12 @@ void MIST::FILES_get(MIST_istream& is)
 		else if (same(variable,"listing")) FILES_listing_name=value;
 		else if (same(variable,"header")) FILES_header.push_back(value);
         else if (same(variable,"format")) OUTPUT_format=value;
+		else if (same(variable,"basis")) {
+			if (value=="psps") polarizationbasis = BRDF_Model::psps;
+			else if (value=="xyxy") polarizationbasis = BRDF_Model::xyxy;
+			else if (value=="plane") polarizationbasis = BRDF_Model::plane;
+			else throw MIST_exception("Invalid polarization basis: " + value);
+		}
 		else throw MIST_exception("Invalid output statement");
 	}
 
@@ -689,8 +695,14 @@ run_calculation()
 #endif
 
 	} catch (exception& e) {
+		if (FILES_listing_bool) {
+			FILES_listing << "Error evaluating " << current_variable << ": " << e.what() << endl;
+		}
 		throw MIST_exception("Error evaluating " + current_variable + "\r\n" + e.what());
 	} catch (...) {
+			if (FILES_listing_bool) {
+				FILES_listing << "Uncaught exception in run_calculation()" << endl;
+			}
 	        throw MIST_exception("Uncaught exception in run_calculation()");
 	}
 }
@@ -711,7 +723,7 @@ MIST(MIST_Calculation_Data* _data) : InputStream(*(_data->is)),out(_data->os)
 	Register((Model*)0);
 
 #ifdef GERMER_MODELS
-	Register_Germer_Models();
+	Register_Germer_Models(); 
 	//Register_Special_Models();
 #endif
 
@@ -720,6 +732,8 @@ MIST(MIST_Calculation_Data* _data) : InputStream(*(_data->is)),out(_data->os)
 	VARIABLES.set_MIST(this);
 	
 	FILES_samples_bool=FILES_listing_bool=FILES_results_bool=false;
+
+	polarizationbasis = BRDF_Model::psps;
 
 	differential = 0.001;
 	thetai = 0;

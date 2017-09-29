@@ -227,7 +227,7 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,10,10,20,20
     DEFPUSHBUTTON   "OK",IDOK,121,262,50,14,WS_GROUP
     EDITTEXT        IDC_EDIT,35,35,245,205,ES_MULTILINE | ES_READONLY | NOT WS_BORDER
-    CTEXT           "Modeled Integrated Scatter Tool\r\n(MIST)\r\nVersion 4.00",IDC_STATIC,52,5,190,25
+    CTEXT           "Modeled Integrated Scatter Tool\r\n(MIST)\r\nVersion 4.01",IDC_STATIC,52,5,190,25
 END
 
 IDD_AXISFORM DIALOG  0, 0, 467, 13
@@ -652,12 +652,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "National Institute of Standards and Technology"
             VALUE "FileDescription", "WinMIST MFC Application"
-            VALUE "FileVersion", "4.00"
+            VALUE "FileVersion", "4.01"
             VALUE "InternalName", "WinMIST"
             VALUE "LegalCopyright", "Work of the U.S. Government.  No Copyright."
             VALUE "OriginalFilename", "WinMIST.EXE"
             VALUE "ProductName", "WinMIST Application"
-            VALUE "ProductVersion", "4.00"
+            VALUE "ProductVersion", "4.01"
         END
     END
     BLOCK "VarFileInfo"

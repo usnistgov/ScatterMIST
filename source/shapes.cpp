@@ -68,7 +68,7 @@ MuellerMatrix ModelMueller(MIST* mist,double thetai,double thetas,double phis,do
 		phis!=mist->last_phis ||
 		rotation!=mist->last_rotation ||
 		mist->MODEL_model->get_recalc()) {
-			mist->last_mueller = mist->MODEL_model->Mueller(thetai,thetas,phis,rotation);
+			mist->last_mueller = mist->MODEL_model->Mueller(thetai,thetas,phis,rotation,mist->polarizationbasis);
 			mist->last_thetai=thetai;
 			mist->last_thetas=thetas;
 			mist->last_phis=phis;

@@ -261,7 +261,6 @@ void CWinPolarView::OnDraw(CDC* pDC)
 			//pDC->Rectangle(_r.x-size,_r.y-size,_r.x+size,_r.y+size);
 		}
 	}
-
 	// Draw longitude lines
 	pDC->SelectObject(&dotpen);
 	bool lastgood=false;
