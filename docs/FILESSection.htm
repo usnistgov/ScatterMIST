@@ -1,0 +1,77 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+<h2>&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+<h2>&lt;&lt; <a href="./MISTDocument.htm">5. MIST Document</a></h2>
+<h2>&lt; <a href="./OUTPUTSSection.htm">5.7 OUTPUTS Section</a></h2>
+
+
+<h2>5.8 FILES Section</h2>
+
+<p>The FILES section allows the user to specify where results will be
+written and some formatting options. When one adds or edits an element
+in this section, a dialog box opens:
+
+<p>
+  <center><img src="./images/Fig29.gif" alt=""></center>
+
+<p>There are five different variables allowed in this section:
+<b>results</b>, <b>listing</b>, <b>samples</b>, <b>header</b>, and <b>format</b>. The <b>results</b> variable is
+used to specify the output data file. If results is not defined, MIST
+will use the project file name, appending it with <b>.dat</b>. The <b>listing</b>
+variable is used to specify a data file for other information that
+sometimes can help in debugging a simulation. If <b>listing</b> is not
+defined, MIST will use the project file name, appending it with
+</b>.lst</b>. The <b>samples</b> variable is used to specify a file that will contain
+every BRDF value evaluated during integration. If samples is not
+defined, no such file will be created. The <b>header</b> variable is used to
+define information that is placed at the top of the output data
+file. Multiple header variables (simply repeating the <b>header</b>
+definition) can be specified. Finally, the <b>format</b> variable can be used
+to specify an output format for the numerical values. The <b>format</b>
+variable is interpreted using the C printf rules. For example,
+“<b>%12.8le\t</b>” will print the value as a twelve-digit floating point
+number, with eight digits to the right of the decimal point, followed
+by a tab character.
+
+<h2>&gt; <a href="./Polarization.htm">6. Polarization</a></h2>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

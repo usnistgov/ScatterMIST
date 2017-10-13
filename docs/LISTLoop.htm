@@ -1,0 +1,103 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+   <h2>&lt;&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+    <h2>&lt;&lt;&lt; <a href="./MISTDocument.htm">5. MIST Document</a></h2>
+	<h2>&lt;&lt; <a href="./VARIEDPARAMETERSSection.htm">5.5 VARIED PARAMETERS Section</a></h2>
+	    <h2>&lt; <a href="./FORLoop.htm">5.5.1 FOR Loop</a></h2>
+
+  <h2>5.5.2 LIST loop</h2>
+  
+<p>A LIST loop enables the user to specify a file that contains a list
+of parameters and the values that they should take. If a LIST loop is
+chosen, a dialog box will appear:
+  
+<p>
+  <center><img src="./images/Fig15.gif" alt=""></center>
+
+<p>The file should be a text file containing whitespace-delimited
+columns. The first line should specify the variables that should be
+varied, and the remaining lines should contain the values that those
+variables should take. For example:
+  
+<pre><tt>
+    thetai thetas
+    25 -10
+    25 0
+    25 10
+    30 20
+    30 30
+    30 40
+</tt></pre>
+
+<p>In this example, six different combinations of thetai and thetas
+would be used. The variable(s) may be any variable defined in the USER
+VARIABLES, REQUIRED VARIABLES, or MODEL PARAMETERS
+sections. Furthermore, the file can contain expressions or string
+values. For example, the following will evaluate the model for four
+different materials:
+  
+  <pre><tt>
+      $substrate
+      gold.txt
+      silicon.txt
+      silica.txt
+      tungsten.txt
+</tt></pre>
+
+<p>Alternatively, the incident polarization and the polarization
+sensitivity can be varied (provided scatterdpol is defined):
+
+  <pre><tt>
+      incidentpol scatteredpol
+      (1,1,0,0) (0.5,0.5,0,0)
+      (1,-1,0,0) (0.5,-0.5,0,0)
+  </tt></pre>
+  
+<p>After a LIST loop has been defined, it will show up in the VARIED
+PARAMETERS section of the tree menu. For example:
+
+<p>
+  <center><img src="./images/Fig16.gif" alt=""></center>
+
+<h2>&gt; <a href="./INTEGRALSSection.htm">5.6 INTEGRALS Section</a></h2>
+<h2>&gt;&gt; <a href="./Polarization.htm">6. Polarization</a></h2>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

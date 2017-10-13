@@ -1,0 +1,79 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+<h2>&lt;&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+<h2>&lt;&lt;&lt; <a href="./MISTDocument.htm">5. MIST Document</a></h2>
+<h2>&lt;&lt; <a href="./INTEGRALSSection.htm">5.6 INTEGRALS Section</a></h2>
+<h2>&lt; <a href="./ANNULUSIntegral.htm">5.6.3 ANNULUS Integral</a></h2>
+
+<h2>5.6.4 POLYGON Integral</h2>
+
+<p>Any arbitrary shape may be specified using a POLYGON integral. When
+a user selects POLYGON integral, the following dialog box opens:
+
+<p>
+  <center><img src="./images/Fig24.gif" alt=""></center>
+
+<p>The user must choose a direction by which the polarization is
+defined and a sensitivity to polarization in that direction. The
+polarization sensitivity at other points in the aperture are rotated
+in a manner appropriate for a paraxial optical element whose axis is
+  along the specified direction.
+
+<p>The vertices of the polygon can be
+entered by entering directions into the Theta and Phi edit boxes, and
+pressing the Add button. The direction will show up in the list
+box. Once in the list box, a particular direction can be highlighted
+  and edited, removed, and moved up or down in the list.
+
+<p>Notice that,
+by default, the variable <b>incidentpol</b> is used as the incident
+polarization. Any Stokes vector may be substituted for
+<b>incidentpol</b>. The following is an example of an integration region with
+four vertices:
+
+<p>
+  <center><img src="./images/Fig25.gif" alt=""></center>
+
+<h2>&gt; <a href="./DIFFERENTIALIntegral.htm">5.6.5 DIFFERENTIAL Integral</a></h2>
+<h2>&gt;&gt; <a href="./OUTPUTSSection.htm">5.7 OUTPUTS Section</a></h2>
+<h2>&gt;&gt;&gt; <a href="./Polarization.htm">6. Polarization</a></h2>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

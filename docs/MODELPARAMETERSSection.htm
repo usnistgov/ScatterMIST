@@ -1,0 +1,83 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+    <h2>&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+
+    <h2>&lt;&lt; <a href="./MISTDocument.htm">5. MIST Document</a></h2>
+	<h2>&lt; <a href="./REQUIREDVARIABLESSection.htm">5.3 REQUIRED VARIABLES Section</a></h2>
+
+<h2>5.4 MODEL PARAMETERS Section</h2>
+
+<p>The MODEL PARAMETERS Section lists the parameters in the model, allowing the user to edit them:
+
+<p>
+  <center><img src="./images/Fig9.gif" alt=""></center>
+
+Some parameters are models themselves and may have sub-parameters.
+For example, if the user double clicks on <tt>psd</tt> above, the following
+dialog box opens:
+
+<p>
+  <center><img src="./images/Fig10.gif" alt=""></center>
+
+<p>The user can then select among the possible models for that parameter. When the user presses OK, all of the sub-parameters are updated with their default values, unless the box is checked. 
+
+<p>Double-clicking on other parameters will open the following dialog box:
+
+<p>
+  <center><img src="./images/Fig11.gif" alt=""></center>
+  
+<p>If the box marked “Transfer directly as a string to model” is not
+checked, then any arithmetic expression may be used for the value,
+using any parameters defined above it, and that parameter may be used
+in other expressions.  Expressions can be used inside complex numbers
+(that is, as two expressions separated by a comma and surrounded by
+parentheses).  Some parameters should not be evaluated or treated as
+variables, namely those that specify a filename, such as optical
+property information, or dielectric stack information.  In that case,
+this box should be checked so that MIST does not attempt to evaluate
+it as an arithmetic expression.
+
+
+<h2>&gt; <a href="./VARIEDPARAMETERSSection.htm">5.5 VARIED PARAMETERS Section</a></h2>
+<h2>&gt;&gt; <a href="./Polarization.htm">6. Polarization</a></h2>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

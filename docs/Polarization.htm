@@ -1,0 +1,141 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+<h2>&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+<h2>&lt;&lt; <a href="./MISTDocument.htm">5. MIST Document</a></h2>
+<h2>&lt; <a href="./FILESSection.htm">5.8 FILES Section</a></h2>
+
+<h2>6. Polarization</h2>
+
+<p>All of the BRDF models provided by the <a href=
+"../../SCATMECH/docs/index.htm">SCATMECH</a> library return a
+Mueller matrix BRDF, ${\bf f}_{\rm r}$, relating the scattered Stokes
+vector ${\rm d}{\bf \Phi}_{\rm s}$ to the incident Stokes vector power
+${\bf \Phi}_{\rm i}$:
+\begin{equation}
+  {\rm d}{\bf \Phi}_{\rm s}={\bf f}_{\rm r}\cdot{\bf \Phi}_{\rm i}\cos\theta_{\rm s}\;{\rm d}\Omega
+  \end{equation}
+  
+To obtain reflectance values, the incident Stokes powers should be
+normalized to unity. The following table describes some suitable
+  incident polarizations:</p>
+
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Incident polarization</th>
+      <th>Interpretation</th>
+    </tr>
+    <tr>
+      <td><b>(1,0,0,0)</b></td>
+      <td>unpolarized incident light</td>
+    </tr>
+    <tr>
+      <td><b>(1,1,0,0)</b></td>
+      <td>s-polarized incident light, electric field perpendicular to the plane of incidence</td>
+    </tr>
+    <tr>
+      <td><b>(1,-1,0,0)</b></td>
+      <td>p-polarized incident light, electric field parallel to the plane of incidence</td>
+    </tr>
+    <tr>
+      <td><b>(1,0,1,0)</b></td>
+      <td>45° polarized incident light</td>
+    </tr>
+    <tr>
+      <td><b>(1,0,0,1)</b></td>
+      <td>left-circularly polarized incident light</td>
+    <tr>
+      <td><b>(1,0,0,-1)</b></td>
+      <td>right-circularly polarized incident light</td>
+    </tr>
+    <tr>
+      <td><b>(1,cosd(2*inpol),sind(2*inpol),0)</b></td>
+      <td>linearly polarized incident light at an angle inpol from s-polarized</td>
+    </tr>
+  </table>
+
+<p>To obtain the measured scattered power or the effective BRDF, the
+  reflected Stokes vector is multiplied by a Stokes sensitivity vector
+  ${\bf S}$: \begin{equation} \Phi_{\rm r}={\bf S}\cdot{\bf \Phi}_{\rm
+  r} \end{equation} The Stokes sensitivity must reflect the loss that
+  would be exhibited by a polarizer having the specific
+  sensitivity. That is, a fully polarization sensitive detector will
+  detect only half of unpolarized light incident upon it. Thus, the
+  following table represents polarization sensitivities appropriate
+  for use in MIST:
+</P>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Polarization Sensitivity</th>
+      <th>Interpretation</th>
+    </tr>
+    <tr>
+      <td><b>(1,0,0,0)</b></td>
+      <td>insensitive to polarization</td>
+    </tr>
+    <tr>
+      <td><b>(0.5,0.5,0,0)</b></td>
+      <td>sensitive to only s-polarized light</td>
+    </tr>
+    <tr>
+      <td><b>(0.5,-0.5,0,0)</b></td>
+      <td>sensitive to only p-polarized light</td>
+    </tr>
+    <tr>
+      <td><b>(0.5,0,0.5,0)</b></td>
+      <td>sensitive to only 45° polarized light</td>
+    </tr>
+    <tr>
+      <td><b>(0.5,0,0,0.5)</b></td>
+      <td>sensitive to only left-circularly polarized light</td>
+    </tr>
+    <tr>
+      <td><b>(0.5,0,0,-0.5)</b></td>
+      <td>sensitive to only right-circularly polarized light</td>
+    </tr>
+    <tr>
+      <td><b>(1/2,cosd(2*inpol)/2,sind(2*inpol)/2,0)</b></td>
+      <td>sensitive to linearly polarized light at an angle inpol from s-polarized</td>
+    </tr>
+  </table>
+
+    <h2>&gt; <a href="./RunningTheSimulation.htm">7. Running the Simulation</a></h2>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

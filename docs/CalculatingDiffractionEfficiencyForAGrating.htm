@@ -1,0 +1,83 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+<h2>&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+<h2>&lt;&lt; <a href="./ExamplesAndOtherNotes.htm">12. Examples and Other Notes</a></h2>
+<h2>&lt; <a href="CalculatingIntegratedCrossSectionForParticlesOnSurfaces.htm">12.7 Calculating Integrated Cross Section for Particles on Surfaces</a></h2>
+
+  
+<h2>12.8 Calculating Diffraction Efficiency for a Grating</h2>
+
+<p>Version 6.00 of <a href=
+"../../SCATMECH/docs/index.htm">SCATMECH</a> added Rigorous Coupled Wave (RCW) analysis
+of gratings to its suite of capabilities, through the classes
+<a href="../../SCATMECH/docs/rcwmodel.htm">RCW_Model</a>
+and <a href="../../SCATMECH/docs/grating.htm">Grating</a>. Because
+gratings inherently have BRDFs that behave like delta functions, and
+because delta functions cannot be numerically integrated, the class
+<a href="../../SCATMECH/docs/rcwbrdf.htm">RCW_BRDF_Model</a> was created, which casts the theory into a form
+acceptable to MIST. In short, it spreads each of the diffraction peaks
+into a finite cone with a half-angle given by the parameter
+<b>alpha</b>. Version 7.00 of <a href=
+"../../SCATMECH/docs/index.htm">SCATMECH</a> added RCW code for cross
+gratings, though the
+classes <a href="../../SCATMECH/docs/crossrcwmodel.htm">CrossRCW_Model</a>
+and <a href="../../SCATMECH/docs/crossgrating.htm">CrossGrating</a>. In
+a similar fashion, the
+class <a href="../../SCATMECH/docs/crossrcwbrdf.htm">CrossRCW_BRDF_Model</a>
+was created to allow its use by MIST.
+  
+<p>To calculate diffraction efficiency using MIST, one can start by
+examining the example
+code <a href="../examples/grating.mist">grating.mist</a>. In order to
+detect a specific diffraction order, we need to calculate at what
+angles it will occur:
+
+<p>
+  <center><img src="./images/Fig43.gif" alt=""></center>
+  
+<p>It then calculates the diffraction efficiency by evaluating the
+effective BRDF in the diffracted direction (given by thetas and phis),
+correcting for the solid angle over which the light is spread:
+<p>
+  <center><img src="./images/Fig44.gif" alt=""></center>
+  
+<h2>&gt; <a href="LegalDisclaimer.htm">13. Legal Disclaimer</a></h2>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

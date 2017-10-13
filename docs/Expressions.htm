@@ -1,0 +1,229 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+<h2>&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+<h2>&lt; <a href="./ViewingTheSampledPoints.htm">9. Viewing the Sampled Points</a></h2>
+
+<h2>10. Expressions</h2>
+  
+<p>All numeric parameters in MIST are treated as expressions which are
+evaluated each time they are needed. These expressions can use any of
+the binary arithmetic operators listed below, listed in order of
+precedence, with each row indicating items having the same
+precedence:</p>
+
+    <table border="1" cellpadding="5">
+      <tr>
+	<td><b>x^y</b></td>
+	<td>power</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+      </tr>
+      <tr>
+	<td><b>x*y</b></td>
+	<td>multiplication</td>
+	<td><b>x/y</b></td>
+	<td>division</td>
+	<td></td>
+	<td></td>
+      </tr>
+      <tr>
+	<td><b>x+y</b></td>
+	<td>addition</td>
+	<td><b>x-y</b></td>
+	<td>subtraction</td>
+	<td></td>
+	<td></td>
+      </tr>
+      <tr>
+	<td><b>x&gt;y</b></td>
+	<td>greater than</td>
+	<td><b>x&lt;y</b></td>
+	<td>less than</td>
+	<td><b>x=y</b></td>
+	<td>equal to</td>
+      </tr>
+      <tr>
+	<td><b>x&amp;y</b></td>
+	<td>and</td>
+	<td><b>x|y</b></td>
+	<td>or</td>
+	<td></td>
+	<td></td>
+      </tr>
+    </table>
+
+<p>Parentheses can be used and nested to any degree. The table below lists functions that can be used in the expressions:</p>
+
+    <table border="1" cellpadding="5">
+      <tr>
+	<td><b>exp(x)</b></td>
+	<td>exponential</td>
+	<td><b>log(x)</b></td>
+	<td>natural logarithm</td>
+      </tr>
+      <tr>
+	<td><b>log10(x)</b></td>
+	<td>base-10 logarithm</td>
+	<td><b>sqrt(x)</b></td>
+	<td>square root</td>
+      </tr>
+      <tr>
+	<td><b>sin(x)</b></td>
+	<td>sine</td>
+	<td><b>sind(x)</b></td>
+	<td><b>sin(x*pi/180)</b></td>
+      </tr>
+      <tr>
+	<td><b>cos(x)</b></td>
+	<td>cosine</td>
+	<td><b>cosd(x)</b></td>
+	<td><b>cos(x*pi/180)</b></td>
+      </tr>
+      <tr>
+	<td><b>tan(x)</b></td>
+	<td>tangent</td>
+	<td></b>tand(x)</b></td>
+	<td></b>tan(x*pi/180)<b></td>
+      </tr>
+      <tr>
+	<td><b>asin(x)</b></td>
+	<td>arcsine</td>
+	<td><b>asind(x)</b></td>
+	<td><b>asin(x)*180/pi</b></td>
+      </tr>
+      <tr>
+	<td><b>acos(x)</b></td>
+	<td>arccosine</td>
+	<td><b>acosd(x)</b></td>
+	<td><b>acos(x)*180/pi</b></td>
+      </tr>
+      <tr>
+	<td><b>atan(x)</b></td>
+	<td>arctangent</td>
+	<td><b>atand(x)</b></td>
+	<td><b>atan(x)*180/pi</b></td>
+      </tr>
+      <tr>
+	<td><b>sinh(x)</b></td>
+	<td>hyperbolic sine</td>
+	<td><b>cosh(x)</b></td>
+	<td>hyperbolic cosine</td>
+      </tr>
+      <tr>
+	<td><b>tanh(x)</b></td>
+	<td>hyperbolic tangent</td>
+	<td><b>atan2(y,x)</b></td>
+	<td>polar angle of the point (x,y)</td>
+      </tr>
+      <tr>
+	<td><b>atan2d(y,x)</b></td>
+	<td>atan2(y,x)*pi/180</td>
+	<td><b>abs(x)</b></td>
+	<td>absolute value</td>
+      </tr>
+      <tr>
+	<td><b>not(x)</b></td>
+	<td>1, if x zero, 0 otherwise</td>
+	<td><b>min(x,y)</b></td>
+	<td>minimum</td>
+      </tr>
+      <tr>
+	<td><b>max(x,y)</b></td>
+	<td>maximum</td>
+	<td><b>or(x,y)</b></td>
+	<td>x|y</td>
+      </tr>
+      <tr>
+	<td><b>nor(x,y)</b></td>
+	<td>not or</td>
+	<td><b>and(x,y)</b></td>
+	<td>x&amp;y</td>
+      </tr>
+      <tr>
+	<td><b>nand(x,y)</b></td>
+	<td>not and</td>
+	<td><b>resqrt(x,y)</b></td>
+	<td>real part of sqrt(x+i*y)</td>
+      </tr>
+      <tr>
+	<td><b>imsqrt(x,y)</b></td>
+	<td>imaginary part of sqrt(x+i*y)</td>
+	<td><b>resqr(x,y)</b></td>
+	<td>real part of(x+i*y)^2</td>
+      </tr>
+      <tr>
+	<td><b>imsqr(x,y)</b></td>
+	<td>imaginary part of (x+i*y)^2</td>
+	<td><b>gt(x,y)</b></td>
+	<td>x&gt;y</td>
+      </tr>
+      <tr>
+	<td><b>lt(x,y)</b></td>
+	<td>x&lt;y</td>
+	<td><b>ge(x,y)</b></td>
+	<td>x>=y</td>
+      </tr>
+      <tr>
+	<td><b>eq(x,y)</b></td>
+	<td>x=y</td>
+	<td><b>ne(x,y)</b></td>
+	<td>x!=y</td>
+      </tr>
+      <tr>
+	<td><b>if(x,y,z)</b></td>
+	<td>if (x) then y, else z</td>
+	<td></td>  
+	<td></td>  
+      </tr>
+    </table>
+
+<p>
+  Table lookup can be accomplished using the <b>@filename(x)</b> and
+</b>@filename(x,i)</b> functions. If the first is called, then the program
+will assume the first two columns of the file <b>filename</b> contains an
+interpolation table. If the second is called, the program will use the
+first and i-th columns for the lookup table.
+      
+<h2>&gt; <a href="./IntegrationMethodAndAccuracy.htm">11. Integration Method and Accuracy</a></h2>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

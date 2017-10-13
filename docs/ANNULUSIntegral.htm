@@ -1,0 +1,78 @@
+<html><head>
+   <link rel="STYLESHEET" href="style.css" type="text/css">
+   <title>Modeled Integrated Scatter Tool (MIST)</title>
+   <meta name="keywords" content="scattering, optics, light, brdf, 
+				bidirectional, mueller matrix, stokes matrix,
+				polarimetry, polarization, ellipsometry, reflectance">
+   <meta name="description" content="Modeled Integrated Scatter Tool (MIST)">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+
+<a name="top"><!-- --></a>
+
+<br clear=all>
+
+<center><h1>Modeled Integrated Scatter Tool (MIST)</h1></center>
+
+<hr>
+
+<h2>&lt;&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
+<h2>&lt;&lt;&lt; <a href="./MISTDocument.htm">5. MIST Document</a></h2>
+<h2>&lt;&lt; <a href="./INTEGRALSSection.htm">5.6 INTEGRALS Section</a></h2>
+<h2>&lt; <a href="./CIRCLEIntegral.htm">5.6.2 CIRCLE Integral</a></h2>
+
+<h2>5.6.3 ANNULUS Integral</h2>
+
+<p>An ANNULUS integral calculates the reflectance over an annular
+aperture. The dialog box that opens when the user selects an ANNULUS
+integral is shown below:
+  
+<p>
+  <center><img src="./images/Fig22.gif" alt=""></center>
+
+<p>The user selects a name for the integral, an incident polarization,
+a polarization sensitivity, polar and azimuthal angles for both the
+inner and outer circles, and the half angles for each of the
+circles. Notice that, by default, the variable <b>incidentpol</b> is used as
+the incident polarization. Any Stokes vector may be substituted for
+<b>incidentpol</b>. The polarization sensitivity should be set to a
+four-element Stokes vector.
+  
+<p>The following shows the integration area for an ANNULUS integral,
+where the outer circle has a polar angle of 0°, an azimuthal angle of
+0°, and a half-angle of 60°, while the inner circle has a polar angle
+of 45°, an azimuthal angle of 0°, and a half angle of 10°:
+
+<p>
+  <center><img src="./images/Fig23.gif" alt=""></center>
+  
+<p>If the inner circle is not entirely contained in the outer circle,
+  the resulting shape will not represent an annulus.
+
+<h2>&gt; <a href="./POLYGONIntegral.htm">5.6.4 POLYGON Integral</a></h2>
+<h2>&gt;&gt; <a href="./OUTPUTSSection.htm">5.7 OUTPUTS Section</a></h2>
+<h2>&gt;&gt;&gt; <a href="./Polarization.htm">6. Polarization</a></h2>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- END FOOTER -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
