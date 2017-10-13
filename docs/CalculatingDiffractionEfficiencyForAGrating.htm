@@ -36,27 +36,27 @@ MathJax.Hub.Config({
 <h2>12.8 Calculating Diffraction Efficiency for a Grating</h2>
 
 <p>Version 6.00 of <a href=
-"../../SCATMECH/docs/index.htm">SCATMECH</a> added Rigorous Coupled Wave (RCW) analysis
+"https://thomas-germer.github.io/SCATMECH">SCATMECH</a> added Rigorous Coupled Wave (RCW) analysis
 of gratings to its suite of capabilities, through the classes
-<a href="../../SCATMECH/docs/rcwmodel.htm">RCW_Model</a>
-and <a href="../../SCATMECH/docs/grating.htm">Grating</a>. Because
+<a href="https://thomas-germer.github.io/SCATMECH/rcwmodel.htm">RCW_Model</a>
+and <a href="https://thomas-germer.github.io/SCATMECH/grating.htm">Grating</a>. Because
 gratings inherently have BRDFs that behave like delta functions, and
 because delta functions cannot be numerically integrated, the class
-<a href="../../SCATMECH/docs/rcwbrdf.htm">RCW_BRDF_Model</a> was created, which casts the theory into a form
+<a href="https://thomas-germer.github.io/SCATMECH/rcwbrdf.htm">RCW_BRDF_Model</a> was created, which casts the theory into a form
 acceptable to MIST. In short, it spreads each of the diffraction peaks
 into a finite cone with a half-angle given by the parameter
 <b>alpha</b>. Version 7.00 of <a href=
-"../../SCATMECH/docs/index.htm">SCATMECH</a> added RCW code for cross
+"https://thomas-germer.github.io/SCATMECH">SCATMECH</a> added RCW code for cross
 gratings, though the
-classes <a href="../../SCATMECH/docs/crossrcwmodel.htm">CrossRCW_Model</a>
-and <a href="../../SCATMECH/docs/crossgrating.htm">CrossGrating</a>. In
+classes <a href="https://thomas-germer.github.io/SCATMECH/crossrcwmodel.htm">CrossRCW_Model</a>
+and <a href="https://thomas-germer.github.io/SCATMECH/crossgrating.htm">CrossGrating</a>. In
 a similar fashion, the
-class <a href="../../SCATMECH/docs/crossrcwbrdf.htm">CrossRCW_BRDF_Model</a>
+class <a href="https://thomas-germer.github.io/SCATMECH/crossrcwbrdf.htm">CrossRCW_BRDF_Model</a>
 was created to allow its use by MIST.
   
 <p>To calculate diffraction efficiency using MIST, one can start by
 examining the example
-code <a href="../examples/grating.mist">grating.mist</a>. In order to
+code <a href="./examples/grating.mist">grating.mist</a>. In order to
 detect a specific diffraction order, we need to calculate at what
 angles it will occur:
 
