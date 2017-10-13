@@ -5,3 +5,5 @@ an integrated scattering system. The program performs an integration of the bidi
 reflectance distribution function (BRDF) over solid angles specified by the user and allows
 the dependence of these integrals on model parameters to be investigated. The models are
 provided by the <a href="https://github.com/thomas-germer/SCATMECH">SCATMECH</a> library of scattering codes.
+
+Full documentation can be found at <a href="https://thomas-germer.github.io/MIST/">https://thomas-germer.github.io/MIST</a>.
