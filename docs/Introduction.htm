@@ -1,4 +1,7 @@
 <html><head>
+<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+<script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script>
+<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
    <link rel="STYLESHEET" href="style.css" type="text/css">
    <title>Modeled Integrated Scatter Tool (MIST)</title>
    <meta name="keywords" content="scattering, optics, light, brdf, 
@@ -29,7 +32,8 @@ MathJax.Hub.Config({
 
 <hr>
 
-<h2>&lt <a href="./index.htm">Table of Contents</a></h2>
+<h2>Begin: <a href="./index.htm">Table of Contents</a><br>
+Next: <a href="./InstallingMIST.htm">Installing MIST (next)</a></h2>
 
 <h2>1. Introduction</h2>
 
@@ -71,7 +75,7 @@ given by
 
 <p>The MIST program is designed to perform this integration using any of
 the BRDF models provided in the <a href=
-"https://thomas-germer.github.io/SCATMECH">SCATMECH</a> library and for geometries
+"https://pages.nist.gov/USNISTGOV/docs/SCATMECH">SCATMECH</a> library and for geometries
 specified by the user. Furthermore, MIST allows the user to vary
 parameters in the model or in the definition of the solid angle,
 providing the user with the dependences on those parameters.
@@ -81,7 +85,7 @@ development of calibration curves for an instrument.  For example, the
 absolute response of an instrument to spherical particles can be
 accurately determined as a function of the particle size using the
 <a href=
-"https://thomas-germer.github.io/SCATMECH">SCATMECH</a> model <a href="https://thomas-germer.github.io/SCATMECH/bobvlieg.h">Bobbert_Vlieger_BRDF_Model</a>.  If a set of reference
+"https://pages.nist.gov/USNISTGOV/docs/SCATMECH">SCATMECH</a> model <a href="https://pages.nist.gov/USNISTGOV/SCATMECH/docs/bobvlieg.h">Bobbert_Vlieger_BRDF_Model</a>.  If a set of reference
 particles are used to calibrate the instrument, then these calibration
 curves can be used to interpolate (or even extrapolate) to other
 particle sizes.  The advantage of using a model-based calibration
@@ -101,11 +105,15 @@ used by the calculations.  The incident angle is $\theta_{\rm i}$.
 The scattering direction is defined by polar angle $\theta_{\rm s}$ and azimuth
 angle $\phi_{\rm s}$.</p>
 
-<h2>&gt; <a href="./InstallingMIST.htm">2. Installing MIST</a></h2>
 
+<hr>
+<p>
+<a href="http://www.nist.gov/pml/div685/grp06/germer.cfm">SCATMECH Technical Information and Questions</a><br>
+<a href="http://www.nist.gov/pml/div685/index.cfm" target="_top">Sensor Science Division Home Page</a><br>
+<a href="mailto:fraser@nist.gov">Sensor Science Division Inquiries</a><br>
+<a href="mailto:thomas.germer@nist.gov">Website Comments</a>
+<p>Latest MIST Version: 4.10 (October 2017)</p>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <!-- END FOOTER -->
 
 </td>

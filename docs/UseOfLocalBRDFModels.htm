@@ -1,4 +1,7 @@
 <html><head>
+<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+<script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script>
+<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
    <link rel="STYLESHEET" href="style.css" type="text/css">
    <title>Modeled Integrated Scatter Tool (MIST)</title>
    <meta name="keywords" content="scattering, optics, light, brdf, 
@@ -29,16 +32,16 @@ MathJax.Hub.Config({
 
 <hr>
 
-<h2>&lt;&lt;&lt; <a href="./index.htm">Table of Contents</a></h2>
-<h2>&lt;&lt; <a href="./ExamplesAndOtherNotes.htm">12. Examples and Other Notes</a></h2>
-<h2>&lt; <a href="CalculatingMuellerMatrixBRDF.htm">12.4 Calculating Mueller Matrix BRDF</a></h2>
+<h2>Begin: <a href="./index.htm">Table of Contents</a><br>
+Previous: <a href="CalculatingMuellerMatrixBRDF.htm">Calculating Mueller Matrix BRDF</a><br>
+Next: <a href="CalculatingDifferentialScatterCrossSectionForIsolatedParticles.htm">Calculating Differential Scatter Cross Section for Isolated Particles</a></h2>
 
 
 <h2>12.5 Use of Local BRDF Models</h2>
   
 <p>Any of the <a href=
-"https://thomas-germer.github.io/SCATMECH">SCATMECH</a> models which inherit the class <a href="https://thomas-germer.github.io/SCATMECH/local.htm">Local_BRDF_Model</a>
-(such as <a href="https://thomas-germer.github.io/SCATMECH/bobvlieg.htm"> Bobbert_Vlieger_BRDF_Model</a> or <a href="https://thomas-germer.github.io/SCATMECH/raydef.htm">Rayleigh_Defect_BRDF_Model</a>)
+"https://pages.nist.gov/SCATMECH/docs">SCATMECH</a> models which inherit the class <a href="https://pages.nist.gov/SCATMECH/docs/local.htm">Local_BRDF_Model</a>
+(such as <a href="https://pages.nist.gov/SCATMECH/docs/bobvlieg.htm"> Bobbert_Vlieger_BRDF_Model</a> or <a href="https://pages.nist.gov/SCATMECH/docs/raydef.htm">Rayleigh_Defect_BRDF_Model</a>)
 internally calculate the differential scattering cross-section (DSC)
 before converting it to BRDF. The class Local_BRDF_Model uses the
 parameter <b>density</b> to convert the DSC to BRDF. If one is interested in
@@ -53,11 +56,15 @@ one should set this parameter by
 <p>
   <center><img src="./images/Fig42.gif" alt=""></center>
 
-<h2>&gt; <a href="CalculatingIntegratedCrossSectionForParticlesOnSurfaces.htm">12.7 Calculating Integrated Cross Section for Particles on Surfaces</a></h2>
-<h2>&gt;&gt; <a href="LegalDisclaimer.htm">13. Legal Disclaimer</a></h2>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<p>
+<a href="http://www.nist.gov/pml/div685/grp06/germer.cfm">SCATMECH Technical Information and Questions</a><br>
+<a href="http://www.nist.gov/pml/div685/index.cfm" target="_top">Sensor Science Division Home Page</a><br>
+<a href="mailto:fraser@nist.gov">Sensor Science Division Inquiries</a><br>
+<a href="mailto:thomas.germer@nist.gov">Website Comments</a>
+<p>Latest MIST Version: 4.10 (October 2017)</p>
+
 <!-- END FOOTER -->
 
 </td>
