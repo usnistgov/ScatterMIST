@@ -32,6 +32,24 @@ typedef std::deque<double> vdouble;
 typedef std::deque<vdouble> vvdouble;
 typedef std::deque<std::string> vstring;
 
+class MIST_exception : public std::exception
+{
+public:
+
+	MIST_exception(const std::string& m)
+	{
+		message = "MIST: " + m;
+	}
+	virtual ~MIST_exception() throw() {};
+
+	virtual const char *what() const throw() {
+		return message.c_str();
+	}
+
+private:
+	std::string message;
+};
+
 class MIST_Notifier {
 public:
 	MIST_Notifier() {}

@@ -538,7 +538,7 @@ END_MESSAGE_MAP()
 /////////////////////////////////////////////////////////////////////////////
 // ChooseModelDialog message handlers
 
-int ChooseModelDialog::DoModal() 
+INT_PTR ChooseModelDialog::DoModal() 
 {
 	// TODO: Add your specialized code here and/or call the base class
 	

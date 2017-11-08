@@ -18,41 +18,40 @@
 using namespace std;
 using namespace SCATMECH;
 
-table_loop_variable::table_loop_variable(const string& _filename, Variable_List& _variable_list) 
-		: filename(_filename), loop_variable(_variable_list) 
-{ 
-    string fname = find_file(filename);
-    ifstream_with_comments file(fname.c_str());
-
-    if (!file) throw MIST_exception("Cannot open file " + filename);
+table_loop_variable::table_loop_variable(const string& _filename, Variable_List& _variable_list)
+	: filename(_filename), loop_variable(_variable_list)
+{
+	string fname = find_file(filename);
+	ifstream_with_comments file(fname.c_str());
+	if (!file) throw MIST_exception("Cannot open file " + filename);
 
 	// Get header line...
 	string line = file.getstrline();
-    istringstream linestream(line);
-	int ncol=0;
+	istringstream linestream(line);
+	int ncol = 0;
 	string str;
-	while (linestream >> str,!linestream.fail()) {
+	while (linestream >> str, !linestream.fail()) {
 		vlist.push_back(str);
 		ncol++;
 	}
 
 	table.resize(ncol);
-	npoints =0;
+	npoints = 0;
 
-    for (int i=0; !file.fail() ;++i) {
+	for (int i = 0; !file.fail();++i) {
 		line = file.getstrline();
-		
-		if (file.fail()) {
-			if (npoints==0) throw MIST_exception("No points in LIST loop.");
+
+		if (file.fail() || file.eof() || line.size()==0) {
+			if (npoints == 0) throw MIST_exception("No points in LIST loop.");
 			return;
 		}
 
-        istringstream linestream(line);
-        for (int j=0;j<ncol;++j)  {
+		istringstream linestream(line);
+		for (int j = 0;j < ncol;++j) {
 			string temp;
-			double x;
 			linestream >> temp;
-			if (linestream.fail()) {
+
+			if (linestream.fail()||temp=="") {
 				if (j==0) {
 					if (npoints==0) throw MIST_exception("No points in LIST loop.");
 					return;

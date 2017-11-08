@@ -17,6 +17,7 @@
 #define EVALUATE_H
 
 #include "scatmech.h"
+#include "mist0.h"
 #include <string>
 #include <sstream>
 #include <stack>
@@ -29,7 +30,7 @@ public:
 	
     EVAL_exception(const std::string& m)
 	{
-		message = "EVALUATE: " + m;
+		message = m;
 	}
     virtual ~EVAL_exception() throw() {};
 	
@@ -82,9 +83,26 @@ struct Variable_List {
 class Arithmetic_Evaluator {
 public:
 	Arithmetic_Evaluator(const char* str,const ValueVectorMap& _variables=ValueVectorMap()) 
-			: input(std::string(str)), variables(_variables) {evaluate();}
+			: input(std::string(str)), variables(_variables) 
+	{
+		try {
+			evaluate();
+		}
+		catch (std::exception& e) {
+			throw MIST_exception("Error evaluating \"" + std::string(str) + "\": " + e.what());
+		}
+	}
 	Arithmetic_Evaluator(const std::string& str, const ValueVectorMap& _variables=ValueVectorMap()) 
-			: input(str), variables(_variables) {evaluate();}
+			: input(str), variables(_variables) 
+	{
+		try {
+			evaluate();
+		}
+		catch (std::exception& e) 
+		{ 
+			throw MIST_exception("Error evaluating \"" + str + "\": " + e.what());
+		}
+	}
 
 	const ValueVector& Value() const {return result;}
 	

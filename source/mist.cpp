@@ -40,7 +40,7 @@ inline bool iswspace(char c) {return (( c>=0x09&&c<=0x0D ) || c==0x20);}
 //
 // Define version number...
 //
-#define MIST_VERSION "4.01"
+#define MIST_VERSION "4.11"
 
 using namespace SCATMECH;
 using namespace std;

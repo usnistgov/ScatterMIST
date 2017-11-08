@@ -17,6 +17,7 @@
 #include <string>
 #include "matrix3d.h"
 #include "random.h"
+#include <algorithm>
 
 using namespace std;
 using namespace SCATMECH;

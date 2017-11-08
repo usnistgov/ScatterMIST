@@ -31,23 +31,6 @@
 #include "evaluate.h"
 #include "loops.h"
 
-class MIST_exception : public std::exception
-{
-public:
-	
-    MIST_exception(const std::string& m)
-	{
-		message = "MIST: " + m;
-	}
-    virtual ~MIST_exception() throw() {};
-	
-    virtual const char *what() const throw() {
-		return message.c_str();
-	}
-	
-private:
-    std::string message;
-};
 
 class MIST_istream : public SCATMECH::istream_with_comments
 {
