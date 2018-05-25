@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -68,14 +66,23 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\WinMIST2.ico"
+
 IDR_WINMISTYPE          ICON                    "res\\WinMIST2Doc.ico"
+
 IDR_MODELBROWSER        ICON                    "res\\icon1.ico"
+
 IDR_POLARVIEW           ICON                    "res\\ico00002.ico"
+
 IDR_GRAPHVIEW           ICON                    "res\\ico00003.ico"
+
 IDR_RESULTSVIEW         ICON                    "res\\ico00004.ico"
+
 IDR_SAMPLESVIEW         ICON                    "res\\ico00005.ico"
+
 IDR_LISTINGVIEW         ICON                    "res\\ico00006.ico"
+
 IDR_RAWMISTYPE          ICON                    "res\\ico00001.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -84,12 +91,13 @@ IDR_RAWMISTYPE          ICON                    "res\\ico00001.ico"
 
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_MAINFRAME TOOLBAR  16, 15
+IDR_MAINFRAME TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_FILE_NEW
     BUTTON      ID_FILE_OPEN
@@ -119,7 +127,7 @@ END
 // Menu
 //
 
-IDR_MAINFRAME MENU 
+IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -175,7 +183,7 @@ BEGIN
     END
 END
 
-IDR_MENU1 MENU 
+IDR_MENU1 MENU
 BEGIN
     MENUITEM "Edit",                        ID_EDIT
 END
@@ -186,7 +194,7 @@ END
 // Accelerator
 //
 
-IDR_MAINFRAME ACCELERATORS 
+IDR_MAINFRAME ACCELERATORS
 BEGIN
     VK_DELETE,      ID_DELETE,              VIRTKEY, NOINVERT
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
@@ -227,10 +235,10 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,10,10,20,20
     DEFPUSHBUTTON   "OK",IDOK,121,277,50,14,WS_GROUP
     EDITTEXT        IDC_EDIT,35,35,245,228,ES_MULTILINE | ES_READONLY | NOT WS_BORDER
-    CTEXT           "Modeled Integrated Scatter Tool\r\n(MIST)\r\nVersion 4.01",IDC_STATIC,52,5,190,25
+    CTEXT           "Modeled Integrated Scatter Tool\r\n(MIST)",IDC_STATIC,52,5,190,25
 END
 
-IDD_AXISFORM DIALOG  0, 0, 467, 13
+IDD_AXISFORM DIALOG 0, 0, 467, 13
 STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD
 FONT 10, "Arial"
 BEGIN
@@ -242,7 +250,7 @@ BEGIN
     CONTROL         "Logarithmic",IDC_YLOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,398,1,51,12
 END
 
-IDD_RUNNING DIALOG  0, 0, 181, 30
+IDD_RUNNING DIALOG 0, 0, 181, 30
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTERMOUSE | WS_POPUP | WS_VISIBLE | WS_CAPTION
 CAPTION "Running Simulation"
 FONT 8, "System"
@@ -271,7 +279,7 @@ BEGIN
     LTEXT           "Index:",IDC_STATIC,207,23,21,9
 END
 
-IDD_TREEWIZARD DIALOG  0, 0, 495, 221
+IDD_TREEWIZARD DIALOG 0, 0, 495, 221
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Model Browser"
 FONT 14, "System"
@@ -282,14 +290,14 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,440,24,50,14
 END
 
-IDD_BROWSERFORM DIALOG  0, 0, 440, 50
+IDD_BROWSERFORM DIALOG 0, 0, 440, 50
 STYLE DS_SETFONT | WS_CHILD
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_MODELNAME,7,7,426,34,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
 END
 
-IDD_WIZARDPARAMS DIALOG  0, 0, 326, 306
+IDD_WIZARDPARAMS DIALOG 0, 0, 326, 306
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Assign Model Parameters"
 FONT 8, "MS Sans Serif"
@@ -302,7 +310,7 @@ BEGIN
     DEFPUSHBUTTON   "Edit",IDC_EDIT,221,257,90,19
 END
 
-IDD_SAVECHANGE DIALOG  0, 0, 186, 44
+IDD_SAVECHANGE DIALOG 0, 0, 186, 44
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Sans Serif"
@@ -344,7 +352,7 @@ BEGIN
     LTEXT           "Comment:",IDC_STATIC,5,115,32,8
 END
 
-IDD_NEWFORLOOP DIALOG  0, 0, 302, 135
+IDD_NEWFORLOOP DIALOG 0, 0, 302, 135
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "For Loop"
 FONT 8, "MS Sans Serif"
@@ -483,7 +491,7 @@ BEGIN
     LTEXT           "Label (optional):",IDC_STATIC,7,7,51,8
 END
 
-IDD_OVERWRITEWARNING DIALOG  0, 0, 186, 61
+IDD_OVERWRITEWARNING DIALOG 0, 0, 186, 61
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Sans Serif"
@@ -493,7 +501,7 @@ BEGIN
     LTEXT           "ModelWizard will overwrite all instructions in current document.  Do you want to continue?",IDC_STATIC,7,17,172,19
 END
 
-IDD_NEWDOCUMENT DIALOG  0, 0, 169, 46
+IDD_NEWDOCUMENT DIALOG 0, 0, 169, 46
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "New Document"
 FONT 8, "MS Sans Serif"
@@ -502,7 +510,7 @@ BEGIN
     PUSHBUTTON      "MIST Raw Text Document",IDCANCEL,7,24,155,14
 END
 
-IDD_RAWMIST DIALOG  0, 0, 393, 266
+IDD_RAWMIST DIALOG 0, 0, 393, 266
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Raw MIST Input"
 FONT 8, "MS Sans Serif"
@@ -512,7 +520,7 @@ BEGIN
     EDITTEXT        IDC_TEXT,5,5,379,233,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
 END
 
-IDD_MODELVARIABLE DIALOG  0, 0, 322, 186
+IDD_MODELVARIABLE DIALOG 0, 0, 322, 186
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Model Variable"
 FONT 8, "MS Sans Serif"
@@ -563,7 +571,7 @@ BEGIN
     LTEXT           "Choose loop type:",IDC_STATIC,5,5,116,10
 END
 
-IDD_LISTLOOPDIALOG DIALOG  0, 0, 307, 86
+IDD_LISTLOOPDIALOG DIALOG 0, 0, 307, 86
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "List Loop"
 FONT 8, "MS Sans Serif"
@@ -652,12 +660,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "National Institute of Standards and Technology"
             VALUE "FileDescription", "WinMIST MFC Application"
-            VALUE "FileVersion", "4.01"
+            VALUE "FileVersion", "4.20"
             VALUE "InternalName", "WinMIST"
             VALUE "LegalCopyright", "Work of the U.S. Government.  No Copyright."
             VALUE "OriginalFilename", "WinMIST.EXE"
             VALUE "ProductName", "WinMIST Application"
-            VALUE "ProductVersion", "4.01"
+            VALUE "ProductVersion", "4.20"
         END
     END
     BLOCK "VarFileInfo"
@@ -673,7 +681,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -896,23 +904,34 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "MIST - Modeled Integrated Scatter Tool"
     IDR_WINMISTYPE          "\n\nMIST Document\nMIST Files (*.mist)\n.mist\nMIST.Document\nMIST Document"
     IDR_RAWMISTYPE          "\n\nRaw MIST Document\nRaw MIST Files (*.txt)\n.txt\nMIST.Document\nMIST Document"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "WinMIST"
     AFX_IDS_IDLEMESSAGE     "Ready"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
     ID_INDICATOR_CAPS       "CAP"
@@ -922,7 +941,7 @@ BEGIN
     ID_INDICATOR_REC        "REC"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new document\nNew"
     ID_FILE_OPEN            "Open an existing document\nOpen"
@@ -935,13 +954,13 @@ BEGIN
     ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Display program information and version number\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_MRU_FILE1       "Open this document"
     ID_FILE_MRU_FILE2       "Open this document"
@@ -961,13 +980,13 @@ BEGIN
     ID_FILE_MRU_FILE16      "Open this document"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
     ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
@@ -977,7 +996,7 @@ BEGIN
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
@@ -992,13 +1011,13 @@ BEGIN
     ID_EDIT_REDO            "Redo the previously undone action\nRedo"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCSIZE          "Change the window size"
     AFX_IDS_SCMOVE          "Change the window position"
@@ -1009,19 +1028,19 @@ BEGIN
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
     AFX_IDS_MDICHILD        "Activate this window"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_RESULTS_TEXT    "View results in text format\nView results in text format"
     ID_VIEW_RESULTS_GRAPH   "View results in graphical format\nView results in graphical format"
@@ -1033,23 +1052,23 @@ BEGIN
     ID_BUTTON32780          "ID_VIEW_SAMPLES_TEXT"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_GRAPHRESULTSFORMVIEW_TMPL 
                             "\nGraphResultsFormView\nGraphR\nGraphR Files (*.gra)\n.gra\nGraphResultsFormView.Document\nGraphR Document"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_MIST0                "Run simulation using faster command line version"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDD_TREEWIZARD          "Opens the Model Browser, which provides information about models and their parameters"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_WIZARD               "Opens the ModelBrowser\nModel Browser"
     ID_MODELWIZARD          "Model Wizard"
@@ -1058,22 +1077,22 @@ BEGIN
     ID_HELP_MISTWEB         "Open browser for MIST Website"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDC_EDIT                "Edit the element"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_POLARVIEW           "\nSampled Points View"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_PURGE                "Clear Results"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

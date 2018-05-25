@@ -31,6 +31,10 @@
 #include "evaluate.h"
 #include "loops.h"
 
+//
+// Define version number...
+//
+#define MIST_VERSION "4.20"
 
 class MIST_istream : public SCATMECH::istream_with_comments
 {

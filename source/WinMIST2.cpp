@@ -31,6 +31,7 @@
 #include "ParameterWizard.h"
 #include "ParameterWizardDoc.h"
 #include "inherit.h"  
+#include "mist.h"
 
 #ifdef GERMER_MODELS
 #include "getmodel.h"
@@ -282,7 +283,8 @@ void CWinMIST2App::OnAppAbout()
 					  "\r\n"; 
 #endif
 
-	aboutDlg.m_text += CString("Build: ") + CString(__DATE__) + CString(" ") + CString(__TIME__);
+	aboutDlg.m_text += CString("Version: ") + CString(MIST_VERSION);
+	aboutDlg.m_text += CString("\r\nBuild: ") + CString(__DATE__) + CString(" ") + CString(__TIME__);
 	aboutDlg.m_text += CString("\r\nUsing: ") + Get_SCATMECH_Version().c_str();
 
 	aboutDlg.DoModal(); 
@@ -357,13 +359,13 @@ CDocument* CWinMIST2App::OpenDocumentFile(LPCTSTR lpszFileName)
 void CWinMIST2App::OnHelpMistweb() 
 {
 	// TODO: Add your command handler code here
-	ShellExecute(NULL, "open", "http://www.nist.gov/pml/div685/grp06/scattering_mist.cfm", NULL, NULL, SW_SHOWNORMAL);
+	ShellExecute(NULL, "open", "https://pages.nist.gov/ScatterMIST/docs/index.htm", NULL, NULL, SW_SHOWNORMAL);
 }
 
 void CWinMIST2App::OnHelpScatmechweb() 
 {
 	// TODO: Add your command handler code here
-	ShellExecute(NULL, "open", "http://pml.nist.gov/Scatmech/html/frontpage.htm", NULL, NULL, SW_SHOWNORMAL);
+	ShellExecute(NULL, "open", "https://pages.nist.gov/SCATMECH/docs/index.htm", NULL, NULL, SW_SHOWNORMAL);
 }
 
 int CWinMIST2App::ExitInstance() 
