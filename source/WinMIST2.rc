@@ -660,12 +660,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "National Institute of Standards and Technology"
             VALUE "FileDescription", "WinMIST MFC Application"
-            VALUE "FileVersion", "4.20"
+            VALUE "FileVersion", "4.21"
             VALUE "InternalName", "WinMIST"
             VALUE "LegalCopyright", "Work of the U.S. Government.  No Copyright."
             VALUE "OriginalFilename", "WinMIST.EXE"
             VALUE "ProductName", "WinMIST Application"
-            VALUE "ProductVersion", "4.20"
+            VALUE "ProductVersion", "4.21"
         END
     END
     BLOCK "VarFileInfo"
