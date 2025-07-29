@@ -83,10 +83,11 @@ void ParameterWizardDoc::Dump(CDumpContext& dc) const
 
 CArchive& operator<<(CArchive& ar,const vdouble& v)
 {
-	ar << v.size();
-	for (vdouble::const_iterator p = v.begin();p!=v.end();++p) {
+	int size = v.size();
+	ar.Write(&size, sizeof(int));
+	for (vdouble::const_iterator p = v.begin(); p != v.end(); ++p) {
 		double x = *p;
-		ar.Write(&x,sizeof(double));
+		ar.Write(&x, sizeof(double));
 	}
 	return ar;
 }
@@ -94,30 +95,35 @@ CArchive& operator<<(CArchive& ar,const vdouble& v)
 CArchive& operator>>(CArchive& ar,vdouble& v) 
 {
 	int size;
-	ar >> size;
-	for (int i=0;i<size;++i) {
+	ar.Read(&size, sizeof(int));
+	v.resize(size);
+	for (int i=0; i<size; ++i) {
 		double x;
 		ar.Read(&x,sizeof(double));
-		v.push_back(x);
+		v[i] = x;
 	}
 	return ar;
 }
 
 CArchive& operator<<(CArchive& ar,const vvdouble& v)
 {
-	ar << v.size();
-	for (vvdouble::const_iterator p = v.begin(); p!=v.end();++p) ar << *p;
+	int size = v.size();
+	ar.Write(&size, sizeof(int));
+	for (vvdouble::const_iterator p = v.begin(); p != v.end(); ++p) {
+		ar << *p;
+	}
 	return ar;
 }
 
 CArchive& operator>>(CArchive& ar,vvdouble& v) 
 {
 	int size;
-	ar >> size;
-	for (int i=0;i<size;++i) {
+	ar.Read(&size, sizeof(int));
+	v.resize(size);
+	for (int i=0; i<size; ++i) {
 		vdouble x;
 		ar >> x;
-		v.push_back(x);
+		v[i] = x;
 	}
 	return ar;	
 }

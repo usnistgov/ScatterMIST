@@ -88,7 +88,7 @@ BOOL CWinMIST2App::InitInstance()
 
 #ifdef GERMER_MODELS 
 	Register_Germer_Models(); 
-	//Register_Special_Models();
+	Register_Special_Models();
 #endif
 
 	AfxEnableControlContainer();

@@ -685,7 +685,7 @@ void ModelModelVariable::BuildSubParameters()
 		mpl = inheritance->get_parameters();
 		
 		for (ModelParameterList::iterator q=mpl.begin();q!=mpl.end();++q) {				
-			if ((*q)->get_inheritance()) {
+			if ((*q)->get_inheritance(NULL)) {
 				ModelModelVariable *p = 
 					new ModelModelVariable(pw,*q,name + "."+(*q)->name.c_str(),(*q)->defaultvalue.c_str());
 				::reg(item,p,true);
@@ -702,9 +702,9 @@ int ModelModelVariable::edit()
 {
 	int result;
 	ChooseModelDialog dialog;
-	dialog.parentmodel = modelparameter->get_inheritance()->get_name().c_str();
+	dialog.parentmodel = modelparameter->get_inheritance(NULL)->get_name().c_str();
 	dialog.returnedmodel = value;
-	//dialog.m_description = modelparameter->get_inheritance()->get_description().c_str();
+	//dialog.m_description = modelparameter->get_inheritance(NULL)->get_description().c_str();
 	dialog.m_description = ParameterDescription(modelparameter);
 	dialog.m_Comment = comment;
 	dialog.m_maintain = false;
@@ -798,7 +798,7 @@ void ModelHeading::set_model()
 		mpl = inheritance->get_parameters();
 		
 		for (ModelParameterList::iterator q=mpl.begin();q!=mpl.end();++q) {				
-			if ((*q)->get_inheritance()) {
+			if ((*q)->get_inheritance(NULL)) {
 				ModelModelVariable *p = 
 					new ModelModelVariable(pw,*q,(*q)->name.c_str(),(*q)->defaultvalue.c_str());
 				::reg(pw->paramitem,p,true);

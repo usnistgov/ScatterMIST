@@ -497,14 +497,12 @@ void MIST::open_files(bool firsttime)
 
   } else {
 #ifdef GERMER_MODELS
-	  if (MyMPI_GetSize()!=1) {
-#else
-	  {
-#endif
-		FILES_results.open(FILES_results_name.c_str(),ios::out|ios::app);
-		FILES_listing.open(FILES_listing_name.c_str(),ios::out|ios::app);
-		if (FILES_samples_bool) FILES_samples.open(FILES_samples_name.c_str(),ios::out|ios::app);
+	  if (MyMPI_GetSize() != 1) {
+		  FILES_results.open(FILES_results_name.c_str(), ios::out | ios::app);
+		  FILES_listing.open(FILES_listing_name.c_str(), ios::out | ios::app);
+		  if (FILES_samples_bool) FILES_samples.open(FILES_samples_name.c_str(), ios::out | ios::app);
 	  }
+#endif
   }
   if (!FILES_results) throw MIST_exception("Problem opening " + FILES_results_name);
   if (!FILES_listing) throw MIST_exception("Problem opening " + FILES_listing_name);
@@ -516,13 +514,11 @@ void MIST::close_files()
 {
 #ifdef GERMER_MODELS
 	if (MyMPI_GetSize()!=1) {
-#else
-	{
-#endif
 		FILES_results.close();
 		FILES_listing.close();
 		if (FILES_samples_bool) FILES_samples.close();
 	}
+#endif
 }
 
 void 
@@ -599,6 +595,7 @@ run_calculation()
 		// The extended arrays contain the integral values, in addition to the other variables...
 		//vector<ValueVector> extended_values=VARIABLES.value;
 		//vector<string> extended_names=VARIABLES.name;
+
 
 		close_files();
 
@@ -690,12 +687,14 @@ run_calculation()
 		MyMPI_DoneWithMyTurn();
 #endif
 
-	} catch (exception& e) {
+	}
+	catch (exception& e) {
 		if (FILES_listing_bool) {
 			FILES_listing << "Error evaluating " << current_variable << ": " << e.what() << endl;
 		}
 		throw MIST_exception("Error evaluating " + current_variable + "\r\n" + e.what());
-	} catch (...) {
+	} 
+	catch (...) {
 			if (FILES_listing_bool) {
 				FILES_listing << "Uncaught exception in run_calculation()" << endl;
 			}
@@ -720,7 +719,7 @@ MIST(MIST_Calculation_Data* _data) : InputStream(*(_data->is)),out(_data->os)
 
 #ifdef GERMER_MODELS
 	Register_Germer_Models(); 
-	//Register_Special_Models();
+	Register_Special_Models();
 #endif
 
 	ClearTableCache();

@@ -34,7 +34,7 @@
 //
 // Define version number...
 //
-#define MIST_VERSION "4.21"
+#define MIST_VERSION "4.22"
 
 class MIST_istream : public SCATMECH::istream_with_comments
 {
