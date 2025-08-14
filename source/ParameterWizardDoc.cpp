@@ -130,19 +130,25 @@ CArchive& operator>>(CArchive& ar,vvdouble& v)
 
 CArchive& operator<<(CArchive& ar,const vstring& v)
 {
-	ar << v.size();
-	for (vstring::const_iterator p = v.begin(); p!=v.end();++p) ar << CString(p->c_str());
+	int size = v.size();
+	ar.Write(&size, sizeof(int));
+	for (vstring::const_iterator p = v.begin(); p != v.end(); ++p) {
+		ar << CString(p->c_str());
+	}
 	return ar;
 }
 
 CArchive& operator>>(CArchive& ar,vstring& v) 
 {
 	int size;
-	ar >> size;
+	ar.Read(&size, sizeof(int));
+	v.resize(size);
 	for (int i=0;i<size;++i) {
 		CString x;
 		ar >> x;
-		v.push_back(string((LPCTSTR)x));
+		v[i] = string((const char*)x);
+		//v[i] = string((LPCTSTR)x);
+		//v.push_back(string((LPCTSTR)x));
 	}
 	return ar;	
 }

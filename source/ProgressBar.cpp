@@ -36,7 +36,7 @@ ProgressBar::ProgressBar(CWnd* pParent /*=NULL*/)
 		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	m_stop=false;
-	this->SetFocus();
+	//this->SetFocus();
 }
 
 
@@ -46,6 +46,7 @@ void ProgressBar::DoDataExchange(CDataExchange* pDX)
 	//{{AFX_DATA_MAP(ProgressBar)
 	DDX_Control(pDX, IDC_PROGRESS1, m_progress);
 	//}}AFX_DATA_MAP
+	this->SetFocus();
 }
 
 
